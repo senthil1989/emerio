@@ -12,7 +12,7 @@ function App() {
       origin: "chennai",
       destination: "bangalore",
       price: 500,
-      rating: "***"
+      rating: '*****'
     },
     {
       id: 1,
@@ -20,26 +20,21 @@ function App() {
       origin: "chennai",
       destination: "bangalore",
       price: 20,
-      rating: "***"
+      rating: '***'
     }
   ];
-  const initialState = {
-    id: null,
-    name: "",
-    origin: "",
-    destination: "",
-    price: 0,
-    rating: ""
-  };
+  const ratingData = [usersData[0].rating,usersData[1].rating];
 
   const [users, setUsers] = useState(usersData);
+  const [usersrating, setUsersRating] = useState(ratingData);
   const [sortby, setSortby] = useState({ isChecked: false, sortName: "" });
 
   const addUser = user => {
     user.id = users.length + 1;
     setUsers([...users, user]);
+    setUsersRating([...usersrating, user.rating.length]);
   };
-
+  console.log(ratingData)
   const asce = () => {
     if (
       users.length !== 2 &&
@@ -127,7 +122,7 @@ function App() {
         </div>
       
       
-      <FlightDetails userData={users} />
+      <FlightDetails ratingCount ={usersrating} userData={users} />
 
       </div>
       

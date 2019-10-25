@@ -33,7 +33,7 @@ const AddFlight = props => {
 			
 			<div class="form-group">
 			<label>Rating</label>
-			<input class="form-control" type="text" name="rating" value={user.rating} onChange={handleInputChange} />
+			<input class="form-control" maxlength="5" type="text" name="rating" value={user.rating} onChange={handleInputChange} />
 			</div>
 			<div class="form-btn">
 			<button class="btn btn-primary">Add new user</button>
