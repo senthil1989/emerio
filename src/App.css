@@ -1,22 +1,65 @@
-.App {
-  text-align: center;
+body{
+  margin: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
+li{
+  list-style: none;
 }
+.primary{
+  width:200px ;
+  height: 40px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 7px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgb(155, 88, 88) ,rgb(177, 177, 141));
+}
+/* input[type=text] {
+  width: 200px;
+  padding: 8px 10px;
+  margin: 10px 5px;
+  
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-btn{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.radio-container{
+display: flex;
+}
+.radio-sty{
+  padding: 10px;
+}
+.radio-center{
+  vertical-align: middle;
+}
+.radio-container label{
+  padding-right: 10px;
+  }
+  .left-content{
+    display: flex;
+  }
+  #flightitem ul{
+    border:1px solid #ddd;
+    padding:0px;
+    display:flex
+  }
+  #flightitem{
+    margin-left: 100px;
+  }
+  #flightitem ul li{
+    border-right: 1px solid #ddd;
+    padding: 10px;
+  }
+  #flightitem ul li:last-child{
+    border-right:none;
+    padding: 10px;
+  }
+  .btn-container{
+    display: flex;
+    justify-content: space-between;
+  }
+.cus-btn{
+  width:100px
 }
 
-.App-link {
-  color: #09d3ac;
-}
